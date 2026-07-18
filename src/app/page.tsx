@@ -8,6 +8,7 @@ import { Journey } from "@/components/journey";
 import { Navbar } from "@/components/navbar";
 import { Projects } from "@/components/projects";
 import { Skills } from "@/components/skills";
+import { profileLinks } from "@/lib/data";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://anuj-kumar.vercel.app";
@@ -28,8 +29,10 @@ const jsonLd = {
     addressCountry: "IN",
   },
   sameAs: [
-    "https://github.com/anujkr09",
-    "https://www.linkedin.com/in/anuj-kumar-7415102a6/",
+    profileLinks.github,
+    profileLinks.linkedin,
+    profileLinks.leetcode,
+    profileLinks.gfg,
   ],
   alumniOf: {
     "@type": "CollegeOrUniversity",

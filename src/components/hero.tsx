@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { codingProfiles, profileLinks } from "@/lib/data";
 
 const roles = [
   "Full Stack Developer",
@@ -141,17 +142,17 @@ export function Hero() {
           <div className="mt-10 flex flex-wrap items-center gap-3">
             {[
               {
-                href: "https://github.com/anujkr09",
+                href: profileLinks.github,
                 Icon: Github,
                 label: "GitHub",
               },
               {
-                href: "https://www.linkedin.com/in/anuj-kumar-7415102a6/",
+                href: profileLinks.linkedin,
                 Icon: Linkedin,
                 label: "LinkedIn",
               },
               {
-                href: "mailto:anujkumar812032@gmail.com",
+                href: profileLinks.email,
                 Icon: Mail,
                 label: "Email",
               },
@@ -165,6 +166,18 @@ export function Hero() {
                 className="grid size-11 place-items-center rounded-full border border-white/10 bg-white/[.035] text-slate-400 transition-all hover:-translate-y-1 hover:border-cyan-400/40 hover:text-cyan-300"
               >
                 <Icon className="size-4" />
+              </a>
+            ))}
+            {codingProfiles.map(({ href, label, shortLabel }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={label}
+                className="grid size-11 place-items-center rounded-full border border-white/10 bg-white/[.035] font-mono text-[10px] font-bold text-slate-400 transition-all hover:-translate-y-1 hover:border-cyan-400/40 hover:text-cyan-300"
+              >
+                {shortLabel}
               </a>
             ))}
             <span className="ml-2 hidden h-5 w-px bg-white/10 sm:block" />

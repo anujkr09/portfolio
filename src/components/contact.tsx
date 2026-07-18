@@ -16,6 +16,7 @@ import { FormEvent, useState } from "react";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { Button } from "@/components/ui/button";
+import { codingProfiles, profileLinks } from "@/lib/data";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -61,7 +62,7 @@ export function Contact() {
 
               <div className="space-y-4">
                 <a
-                  href="mailto:anujkumar812032@gmail.com"
+                  href={profileLinks.email}
                   className="group flex items-center gap-4 rounded-2xl border border-white/[.08] bg-white/[.025] p-4 transition-colors hover:bg-white/[.045]"
                 >
                   <span className="grid size-11 place-items-center rounded-xl bg-blue-500/10 text-cyan-300">
@@ -92,7 +93,7 @@ export function Contact() {
 
               <div className="mt-7 flex gap-3">
                 <a
-                  href="https://github.com/anujkr09"
+                  href={profileLinks.github}
                   target="_blank"
                   rel="noreferrer"
                   aria-label="GitHub"
@@ -101,7 +102,7 @@ export function Contact() {
                   <Github className="size-4" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/anuj-kumar-7415102a6/"
+                  href={profileLinks.linkedin}
                   target="_blank"
                   rel="noreferrer"
                   aria-label="LinkedIn"
@@ -109,6 +110,18 @@ export function Contact() {
                 >
                   <Linkedin className="size-4" />
                 </a>
+                {codingProfiles.map(({ href, label, shortLabel }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={label}
+                    className="grid size-11 place-items-center rounded-full border border-white/10 font-mono text-[10px] font-bold text-slate-400 transition-colors hover:border-cyan-400/30 hover:text-cyan-300"
+                  >
+                    {shortLabel}
+                  </a>
+                ))}
               </div>
             </Reveal>
 

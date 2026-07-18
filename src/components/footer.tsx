@@ -1,4 +1,5 @@
 import { ArrowUp, Github, Linkedin, Mail } from "lucide-react";
+import { codingProfiles, profileLinks } from "@/lib/data";
 
 export function Footer() {
   return (
@@ -15,17 +16,17 @@ export function Footer() {
         <div className="flex items-center gap-2">
           {[
             {
-              href: "https://github.com/anujkr09",
+              href: profileLinks.github,
               label: "GitHub",
               Icon: Github,
             },
             {
-              href: "https://www.linkedin.com/in/anuj-kumar-7415102a6/",
+              href: profileLinks.linkedin,
               label: "LinkedIn",
               Icon: Linkedin,
             },
             {
-              href: "mailto:anujkumar812032@gmail.com",
+              href: profileLinks.email,
               label: "Email",
               Icon: Mail,
             },
@@ -39,6 +40,18 @@ export function Footer() {
               className="grid size-9 place-items-center rounded-full text-slate-600 transition-colors hover:bg-white/[.05] hover:text-white"
             >
               <Icon className="size-4" />
+            </a>
+          ))}
+          {codingProfiles.map(({ href, label, shortLabel }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={label}
+              className="grid size-9 place-items-center rounded-full font-mono text-[9px] font-bold text-slate-600 transition-colors hover:bg-white/[.05] hover:text-white"
+            >
+              {shortLabel}
             </a>
           ))}
         </div>

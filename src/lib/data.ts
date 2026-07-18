@@ -13,6 +13,27 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+export const profileLinks = {
+  github: "https://github.com/anujkr09",
+  linkedin: "https://www.linkedin.com/in/anuj-kumar-7415102a6/",
+  leetcode: "https://leetcode.com/u/AnujSinha09/",
+  gfg: "https://www.geeksforgeeks.org/profile/anujkumaipfi",
+  email: "mailto:anujkumar812032@gmail.com",
+};
+
+export const codingProfiles = [
+  {
+    label: "LeetCode",
+    href: profileLinks.leetcode,
+    shortLabel: "LC",
+  },
+  {
+    label: "GeeksforGeeks",
+    href: profileLinks.gfg,
+    shortLabel: "GFG",
+  },
+];
+
 export const navItems = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
@@ -125,7 +146,8 @@ export const githubHighlights = [
   },
   {
     label: "CS practice",
-    detail: "Dedicated repositories for DSA, OOP, C/C++, and OS concepts.",
+    detail:
+      "Dedicated repositories plus LeetCode and GeeksforGeeks practice for DSA.",
     icon: Binary,
   },
 ];
