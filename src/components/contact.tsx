@@ -101,7 +101,7 @@ export function Contact() {
                   <Github className="size-4" />
                 </a>
                 <a
-                  href="https://linkedin.com/in/anuj-kumar"
+                  href="https://www.linkedin.com/in/anuj-kumar-7415102a6/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="LinkedIn"

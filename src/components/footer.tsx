@@ -20,7 +20,7 @@ export function Footer() {
               Icon: Github,
             },
             {
-              href: "https://linkedin.com/in/anuj-kumar",
+              href: "https://www.linkedin.com/in/anuj-kumar-7415102a6/",
               label: "LinkedIn",
               Icon: Linkedin,
             },

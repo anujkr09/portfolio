@@ -144,7 +144,7 @@ export function Hero() {
                 label: "GitHub",
               },
               {
-                href: "https://linkedin.com/in/anuj-kumar",
+                href: "https://www.linkedin.com/in/anuj-kumar-7415102a6/",
                 Icon: Linkedin,
                 label: "LinkedIn",
               },

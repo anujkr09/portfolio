@@ -29,7 +29,7 @@ const jsonLd = {
   },
   sameAs: [
     "https://github.com/anujkr09",
-    "https://linkedin.com/in/anuj-kumar",
+    "https://www.linkedin.com/in/anuj-kumar-7415102a6/",
   ],
   alumniOf: {
     "@type": "CollegeOrUniversity",

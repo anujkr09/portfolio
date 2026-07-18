@@ -2,7 +2,7 @@ const resumeLines = [
   { text: "ANUJ KUMAR", size: 22, y: 790 },
   { text: "Full Stack Developer | Java Developer | AI & ML Enthusiast", size: 11, y: 768 },
   { text: "Bhopal, Madhya Pradesh, India | anujkumar812032@gmail.com", size: 10, y: 750 },
-  { text: "github.com/anujkr09 | linkedin.com/in/anuj-kumar", size: 10, y: 735 },
+  { text: "github.com/anujkr09 | https://www.linkedin.com/in/anuj-kumar-7415102a6/", size: 10, y: 735 },
   { text: "PROFILE", size: 13, y: 705 },
   { text: "Computer Science Engineering student building scalable applications, AI-powered", size: 10, y: 687 },
   { text: "solutions, and user-friendly products across web, desktop, and data systems.", size: 10, y: 673 },
