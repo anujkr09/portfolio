@@ -222,6 +222,7 @@ export const projects = [
       "JavaScript stack",
     ],
     tech: ["MERN", "JavaScript", "Node.js", "Database"],
+    live: "https://pg-management-n88b.onrender.com/",
     github: "https://github.com/anujkr09/pg-management",
     gradient: "from-cyan-500/25 via-blue-500/20 to-emerald-400/20",
     accent: "text-blue-300",
