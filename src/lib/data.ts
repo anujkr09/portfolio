@@ -1,9 +1,14 @@
 import {
+  Binary,
+  Bot,
   BrainCircuit,
+  Building2,
+  ChartNoAxesCombined,
   Code2,
   Database,
   GitBranch,
   Layers3,
+  Music,
   ServerCog,
   type LucideIcon,
 } from "lucide-react";
@@ -35,7 +40,9 @@ export const skillGroups: SkillGroup[] = [
       { name: "Java", level: 90 },
       { name: "Python", level: 84 },
       { name: "JavaScript", level: 86 },
-      { name: "C++", level: 76 },
+      { name: "TypeScript", level: 82 },
+      { name: "C++", level: 80 },
+      { name: "C", level: 78 },
       { name: "SQL", level: 82 },
     ],
   },
@@ -47,19 +54,22 @@ export const skillGroups: SkillGroup[] = [
     skills: [
       { name: "React", level: 86 },
       { name: "Tailwind CSS", level: 90 },
+      { name: "Bootstrap", level: 86 },
       { name: "HTML", level: 94 },
       { name: "CSS", level: 90 },
     ],
   },
   {
-    title: "Backend",
-    description: "Reliable APIs and scalable services.",
+    title: "MERN & Backend",
+    description: "Reliable APIs and full stack web apps.",
     icon: ServerCog,
     color: "from-emerald-500 to-cyan-400",
     skills: [
-      { name: "Spring Boot", level: 82 },
+      { name: "MERN Stack", level: 84 },
       { name: "Node.js", level: 80 },
       { name: "Express.js", level: 80 },
+      { name: "Spring Boot", level: 82 },
+      { name: "REST APIs", level: 82 },
     ],
   },
   {
@@ -70,6 +80,8 @@ export const skillGroups: SkillGroup[] = [
     skills: [
       { name: "MySQL", level: 88 },
       { name: "MongoDB", level: 78 },
+      { name: "SQL Queries", level: 86 },
+      { name: "JDBC", level: 78 },
     ],
   },
   {
@@ -86,15 +98,35 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    title: "Tooling",
-    description: "A pragmatic developer workflow.",
-    icon: GitBranch,
+    title: "CS Foundations",
+    description: "Core problem solving and engineering fundamentals.",
+    icon: Binary,
     color: "from-slate-300 to-blue-400",
     skills: [
+      { name: "DSA", level: 84 },
+      { name: "OOP", level: 86 },
+      { name: "Operating Systems", level: 74 },
       { name: "Git", level: 88 },
       { name: "GitHub", level: 88 },
-      { name: "VS Code", level: 92 },
     ],
+  },
+];
+
+export const githubHighlights = [
+  {
+    label: "19 public repos",
+    detail: "Projects across web, AI/ML, Java desktop apps, C/C++, and DSA.",
+    icon: GitBranch,
+  },
+  {
+    label: "Full stack range",
+    detail: "MERN, TypeScript, React, Bootstrap, SQL, MongoDB, and APIs.",
+    icon: Layers3,
+  },
+  {
+    label: "CS practice",
+    detail: "Dedicated repositories for DSA, OOP, C/C++, and OS concepts.",
+    icon: Binary,
   },
 ];
 
@@ -111,11 +143,12 @@ export const projects = [
       "Shipment tracking",
       "Analytics dashboard",
     ],
-    tech: ["AI/ML", "React", "Logistics", "Analytics"],
+    tech: ["AI/ML", "React", "JavaScript", "Analytics"],
     live: "https://zyraviq-ai-logistics.onrender.com/",
-    github: "https://github.com/anujkr09",
+    github: "https://github.com/anujkr09/logistic-ai",
     gradient: "from-blue-600/35 via-violet-600/20 to-cyan-500/25",
     accent: "text-cyan-300",
+    icon: Bot,
   },
   {
     number: "02",
@@ -130,12 +163,50 @@ export const projects = [
       "Payment workflow",
     ],
     tech: ["Java", "Swing", "MySQL", "JDBC"],
-    github: "https://github.com/anujkr09",
+    github: "https://github.com/anujkr09/Cinema",
     gradient: "from-violet-600/30 via-fuchsia-500/15 to-orange-400/20",
     accent: "text-violet-300",
+    icon: Building2,
   },
   {
     number: "03",
+    title: "Multi-Agent LLM",
+    kicker: "Autonomous software engineering",
+    description:
+      "A Python-based exploration of multiple LLM agents collaborating on software engineering tasks, from planning to implementation support.",
+    features: [
+      "Multi-agent workflow",
+      "Python automation",
+      "LLM orchestration",
+      "Developer tooling",
+    ],
+    tech: ["Python", "LLM", "Automation", "AI Agents"],
+    github:
+      "https://github.com/anujkr09/Multi-Agent-LLM-for-Autonomous-Software-Engineering",
+    gradient: "from-emerald-500/25 via-cyan-500/15 to-blue-500/25",
+    accent: "text-emerald-300",
+    icon: BrainCircuit,
+  },
+  {
+    number: "04",
+    title: "PG Management",
+    kicker: "MERN-style management system",
+    description:
+      "A JavaScript web application for organizing paying guest operations with practical CRUD flows and data-driven screens.",
+    features: [
+      "Management dashboard",
+      "CRUD workflows",
+      "Responsive UI",
+      "JavaScript stack",
+    ],
+    tech: ["MERN", "JavaScript", "Node.js", "Database"],
+    github: "https://github.com/anujkr09/pg-management",
+    gradient: "from-cyan-500/25 via-blue-500/20 to-emerald-400/20",
+    accent: "text-blue-300",
+    icon: Building2,
+  },
+  {
+    number: "05",
     title: "Resume Studio",
     kicker: "Live document builder",
     description:
@@ -147,12 +218,13 @@ export const projects = [
       "Download functionality",
     ],
     tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/anujkr09",
-    gradient: "from-cyan-500/25 via-blue-500/20 to-emerald-400/20",
-    accent: "text-blue-300",
+    github: "https://github.com/anujkr09/demo",
+    gradient: "from-orange-400/20 via-pink-500/15 to-violet-500/25",
+    accent: "text-orange-300",
+    icon: Code2,
   },
   {
-    number: "04",
+    number: "06",
     title: "RepoVault",
     kicker: "GitHub backup automation",
     description:
@@ -164,9 +236,64 @@ export const projects = [
       "CLI workflow",
     ],
     tech: ["Python", "GitHub API", "JSON", "CLI"],
-    github: "https://github.com/anujkr09",
+    github: "https://github.com/anujkr09/GIT",
     gradient: "from-slate-500/25 via-blue-600/20 to-violet-500/25",
     accent: "text-slate-200",
+    icon: GitBranch,
+  },
+  {
+    number: "07",
+    title: "DSA & C++ Lab",
+    kicker: "Problem solving foundations",
+    description:
+      "A growing collection of data structures, algorithms, OOP practice, C programs, and C++ implementations from core CS learning.",
+    features: [
+      "DSA practice",
+      "OOP concepts",
+      "C/C++ programs",
+      "Core CS revision",
+    ],
+    tech: ["C++", "C", "DSA", "OOP"],
+    github: "https://github.com/anujkr09/DSA_in_C",
+    gradient: "from-blue-500/20 via-slate-500/20 to-cyan-500/20",
+    accent: "text-cyan-200",
+    icon: Binary,
+  },
+  {
+    number: "08",
+    title: "Spotify Clone",
+    kicker: "HTML/CSS frontend practice",
+    description:
+      "A polished frontend clone focused on layout accuracy, responsive sections, visual hierarchy, and clean HTML/CSS structure.",
+    features: [
+      "Music UI layout",
+      "Responsive styling",
+      "HTML semantics",
+      "CSS components",
+    ],
+    tech: ["HTML", "CSS", "Bootstrap", "Frontend"],
+    github: "https://github.com/anujkr09/Spotyfy-clone",
+    gradient: "from-emerald-500/20 via-slate-500/15 to-cyan-500/20",
+    accent: "text-emerald-300",
+    icon: Music,
+  },
+  {
+    number: "09",
+    title: "Machine Learning Labs",
+    kicker: "FCC AI practice",
+    description:
+      "Machine learning practice repositories covering vectors, magic ML experiments, regression, and unsupervised learning workflows.",
+    features: [
+      "Regression practice",
+      "Unsupervised learning",
+      "Notebook experiments",
+      "Model evaluation",
+    ],
+    tech: ["Python", "Jupyter", "Machine Learning", "Data Science"],
+    github: "https://github.com/anujkr09/Fcc-vectors-ml",
+    gradient: "from-violet-500/25 via-blue-500/15 to-fuchsia-500/20",
+    accent: "text-violet-300",
+    icon: ChartNoAxesCombined,
   },
 ];
 

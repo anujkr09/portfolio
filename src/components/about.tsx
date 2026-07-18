@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
+import { githubHighlights } from "@/lib/data";
 
 const focusAreas = [
   {
@@ -52,15 +53,17 @@ export function About() {
             <p className="text-xl leading-9 text-slate-300 md:text-2xl md:leading-10">
               I&apos;m a Computer Science Engineering student with strong
               expertise in{" "}
-              <span className="text-white">full stack development</span>, Java,
-              Python, machine learning, databases, and software engineering.
+              <span className="text-white">full stack development</span>, MERN,
+              Java, Python, C++, SQL, machine learning, databases, and software
+              engineering.
             </p>
             <p className="mt-6 leading-8 text-slate-400">
               I&apos;m passionate about building scalable applications,
               AI-powered solutions, and user-friendly digital products. My
-              experience spans desktop software, modern web applications,
-              database-driven systems, and intelligent tools—always with an eye
-              for clarity, performance, and real-world usefulness.
+              GitHub shows hands-on work across React, HTML, CSS, Bootstrap,
+              JavaScript, MERN-style apps, Java desktop software, SQL-backed
+              systems, Python automation, machine learning labs, and DSA/OOP
+              practice.
             </p>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
@@ -101,12 +104,29 @@ export function About() {
               <span className="h-12 w-px bg-white/10" />
               <div>
                 <p className="font-display text-3xl font-semibold text-white">
-                  4
+                  19
                 </p>
                 <p className="mt-1 text-xs uppercase tracking-wider text-slate-500">
-                  Focus projects
+                  GitHub repos
                 </p>
               </div>
+            </div>
+
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              {githubHighlights.map(({ icon: Icon, label, detail }) => (
+                <div
+                  key={label}
+                  className="rounded-3xl border border-white/[.08] bg-slate-950/30 p-5"
+                >
+                  <Icon className="size-5 text-cyan-300" />
+                  <p className="mt-4 font-display text-sm font-semibold text-white">
+                    {label}
+                  </p>
+                  <p className="mt-2 text-xs leading-5 text-slate-500">
+                    {detail}
+                  </p>
+                </div>
+              ))}
             </div>
           </Reveal>
         </div>

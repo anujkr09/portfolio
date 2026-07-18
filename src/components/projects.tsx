@@ -5,17 +5,11 @@ import {
   ArrowUpRight,
   Check,
   Github,
-  Route,
-  TicketCheck,
-  FileText,
-  Archive,
 } from "lucide-react";
 import { projects } from "@/lib/data";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { Button } from "@/components/ui/button";
-
-const projectIcons = [Route, TicketCheck, FileText, Archive];
 
 export function Projects() {
   return (
@@ -28,8 +22,8 @@ export function Projects() {
         />
 
         <div className="space-y-7">
-          {projects.map((project, index) => {
-            const Icon = projectIcons[index];
+          {projects.map((project) => {
+            const Icon = project.icon;
             return (
               <Reveal key={project.title}>
                 <motion.article

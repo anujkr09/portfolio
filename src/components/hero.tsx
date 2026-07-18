@@ -21,7 +21,9 @@ import { Button } from "@/components/ui/button";
 
 const roles = [
   "Full Stack Developer",
+  "MERN Developer",
   "Java Developer",
+  "DSA & C++ Learner",
   "AI & ML Enthusiast",
 ];
 

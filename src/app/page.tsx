@@ -20,7 +20,7 @@ const jsonLd = {
   email: "mailto:anujkumar812032@gmail.com",
   jobTitle: "Full Stack Developer",
   description:
-    "Full Stack Developer, Java Developer, and AI & Machine Learning Enthusiast based in Bhopal, India.",
+    "Full Stack Developer, MERN Developer, Java Developer, Python programmer, and AI & Machine Learning Enthusiast based in Bhopal, India.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Bhopal",
@@ -37,11 +37,18 @@ const jsonLd = {
   },
   knowsAbout: [
     "Full Stack Development",
+    "MERN Stack",
     "Java",
+    "C++",
+    "Data Structures and Algorithms",
+    "HTML",
+    "CSS",
+    "Bootstrap",
     "Spring Boot",
     "React",
     "Machine Learning",
     "Python",
+    "SQL",
     "Database Management",
   ],
 };
