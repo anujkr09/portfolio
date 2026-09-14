@@ -1,15 +1,23 @@
+"use client";
+
+import { useState } from "react";
 import {
   Award,
   BookOpenCheck,
   CalendarDays,
   GraduationCap,
   Trophy,
+  X,
 } from "lucide-react";
 import { achievements, certifications } from "@/lib/data";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
 
 export function Journey() {
+  const [selectedCertificate, setSelectedCertificate] = useState<
+    (typeof certifications)[number] | null
+  >(null);
+
   return (
     <section id="journey" className="section-shell">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
@@ -115,7 +123,18 @@ export function Journey() {
                 key={`${certification.name}-${index}`}
                 delay={(index % 4) * 0.06}
               >
-                <article className="group h-full rounded-3xl border border-white/[.08] bg-white/[.025] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/20 hover:bg-white/[.045]">
+                <article
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => setSelectedCertificate(certification)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      setSelectedCertificate(certification);
+                    }
+                  }}
+                  className="group h-full cursor-pointer rounded-3xl border border-white/[.08] bg-white/[.025] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/20 hover:bg-white/[.045] focus:outline-none focus:ring-2 focus:ring-cyan-400/60"
+                >
                   <div className="flex items-start justify-between">
                     <span className="grid size-11 place-items-center rounded-2xl bg-gradient-to-br from-blue-500/15 to-violet-500/15 font-display text-xs font-bold text-cyan-200">
                       {certification.mark}
@@ -134,6 +153,47 @@ export function Journey() {
           </div>
         </div>
       </div>
+
+      {selectedCertificate && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 p-4 backdrop-blur-sm"
+          onClick={() => setSelectedCertificate(null)}
+        >
+          <div
+            className="relative w-full max-w-4xl rounded-[2rem] border border-white/[.08] bg-slate-900 p-4 shadow-2xl shadow-cyan-950/30"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setSelectedCertificate(null)}
+              className="absolute right-4 top-4 grid size-10 place-items-center rounded-full border border-white/10 bg-white/[.04] text-slate-300 transition hover:bg-white/[.08] hover:text-white"
+              aria-label="Close certificate preview"
+            >
+              <X className="size-4" />
+            </button>
+
+            <div className="mb-4 pr-12">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-300">
+                Certificate Preview
+              </p>
+              <h3 className="mt-3 font-display text-2xl font-semibold text-white">
+                {selectedCertificate.name}
+              </h3>
+              <p className="mt-1 text-sm text-slate-400">
+                {selectedCertificate.issuer}
+              </p>
+            </div>
+
+            <div className="overflow-hidden rounded-2xl border border-white/[.08] bg-white">
+              <img
+                src={selectedCertificate.image}
+                alt={`${selectedCertificate.name} by ${selectedCertificate.issuer}`}
+                className="max-h-[70vh] w-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

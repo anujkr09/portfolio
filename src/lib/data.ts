@@ -345,11 +345,58 @@ export const achievements = [
 ];
 
 export const certifications = [
-  { name: "Generative AI Professional", issuer: "Oracle", mark: "OR" },
-  { name: "Machine Learning Foundations", issuer: "AWS", mark: "AWS" },
-  { name: "Python Essentials 1", issuer: "Cisco", mark: "Py" },
-  { name: "Python Essentials 2", issuer: "Cisco", mark: "Py" },
-  { name: "CCNA Certifications", issuer: "Cisco", mark: "CC" },
-  { name: "Quantum Computing", issuer: "CDAC", mark: "Q" },
-  { name: "Data Analytics Job Simulation", issuer: "Deloitte", mark: "D" },
+  {
+    name: "Generative AI Professional",
+    issuer: "Oracle",
+    mark: "OR",
+    image: "/certificates/oracle-generative-ai-professional.svg",
+  },
+  {
+    name: "Machine Learning Foundations",
+    issuer: "AWS",
+    mark: "AWS",
+    image: "/certificates/aws-machine-learning-foundations.svg",
+  },
+  {
+    name: "Python Essentials 1",
+    issuer: "Cisco",
+    mark: "Py",
+    image: "/certificates/certificate-placeholder.svg",
+  },
+  {
+    name: "Python Essentials 2",
+    issuer: "Cisco",
+    mark: "Py",
+    image: "/certificates/certificate-placeholder.svg",
+  },
+  {
+    name: "CCNA Certifications",
+    issuer: "Cisco",
+    mark: "CC",
+    image: "/certificates/certificate-placeholder.svg",
+  },
+  {
+    name: "Quantum Computing",
+    issuer: "CDAC",
+    mark: "Q",
+    image: "/certificates/certificate-placeholder.svg",
+  },
+  {
+    name: "Data Analytics Job Simulation",
+    issuer: "Deloitte",
+    mark: "D",
+    image: "/certificates/certificate-placeholder.svg",
+  },
+  {
+    name: "One Day Hands-on Workshop on Brain Computer Interface",
+    issuer: "SISTec",
+    mark: "SI",
+    image: "/certificates/sistec-workshop-certificate.svg",
+  },
+  {
+    name: "50 Days Badge 2025",
+    issuer: "LeetCode",
+    mark: "LC",
+    image: "/certificates/leetcode-50-days-badge.svg",
+  },
 ];
