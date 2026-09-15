@@ -352,6 +352,12 @@ export const certifications = [
     pdf: "/certificates/7th-international-conference-workshop.pdf",
   },
   {
+    name: "Oracle Generative AI Professional",
+    issuer: "Oracle",
+    mark: "OR",
+    pdf: "/certificates/oracle%20eCertificate.pdf",
+  },
+  {
     name: "Machine Learning Foundations",
     issuer: "AWS",
     mark: "AWS",
@@ -412,6 +418,24 @@ export const certifications = [
     pdf: "/certificates/cisco-introduction-to-data-science.pdf",
   },
   {
+    name: "Python Essentials 1",
+    issuer: "Cisco",
+    mark: "Py",
+    pdf: "/certificates/Python_Essentials_1_certificate.pdf",
+  },
+  {
+    name: "Python Essentials 2",
+    issuer: "Cisco",
+    mark: "Py",
+    pdf: "/certificates/Python_Essentials_2.pdf",
+  },
+  {
+    name: "Data Analytics Essentials Certificate",
+    issuer: "Cisco",
+    mark: "DA",
+    pdf: "/certificates/Data_Analytics_Essentials_certificate_anujkumar812032-gmail-com_6c7bb0b1-5eda-4ecc-a9d1-56980087cab6.pdf",
+  },
+  {
     name: "Data Analytics Job Simulation",
     issuer: "Deloitte",
     mark: "D",
@@ -436,6 +460,12 @@ export const certifications = [
     pdf: "/certificates/infosys-introduction-to-business-intelligence.pdf",
   },
   {
+    name: "Introduction to Business Intelligence Certificate",
+    issuer: "Infosys",
+    mark: "BI",
+    pdf: "/certificates/Introduction%20to%20Business%20Intelligence.25.pdf",
+  },
+  {
     name: "JavaScript",
     issuer: "Infosys",
     mark: "JS",
@@ -446,5 +476,17 @@ export const certifications = [
     issuer: "Microsoft Learn",
     mark: "GIT",
     pdf: "/certificates/microsoft-learn-git-github.pdf",
+  },
+  {
+    name: "Quantum Computing",
+    issuer: "CDAC",
+    mark: "Q",
+    pdf: "/certificates/Quantum%20Computing.pdf",
+  },
+  {
+    name: "Winter Break Certificate",
+    issuer: "SISTec",
+    mark: "WB",
+    pdf: "/certificates/Winter%20Break%20Certificate.pdf",
   },
 ];
