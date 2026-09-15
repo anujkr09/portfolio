@@ -105,11 +105,16 @@ export function Journey() {
         </div>
 
         <div className="mt-8">
-          <div className="mb-7 flex items-center gap-3">
-            <Award className="size-5 text-cyan-300" />
-            <h3 className="font-display text-xl font-semibold text-white">
-              Certifications
-            </h3>
+          <div className="mb-7 flex flex-wrap items-center gap-3">
+            <div className="flex items-center gap-3">
+              <Award className="size-5 text-cyan-300" />
+              <h3 className="font-display text-xl font-semibold text-white">
+                Certifications
+              </h3>
+            </div>
+            <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-widest text-cyan-300">
+              {certifications.length} total
+            </span>
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {certifications.map((certification, index) => (
